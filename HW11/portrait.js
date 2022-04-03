@@ -1010,12 +1010,12 @@ function draw()
         movement4*=-1;
     }
  
-    if(x3 >=382 || x3 <=82)
+    if(x3 >=582 || x3 <=82)
     {
         movement5*=-1;
     }
   
-    if(y3 >=582 || y3 <=282)
+    if(y3 >=782 || y3 <=282)
     {
         movement6*=-1;
     }
