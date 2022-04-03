@@ -44,9 +44,7 @@
                 circle(22,22,diameter);
                 fill(160,199,196);
                 circle(62,22,diameter);
-
-                // skipped circle for movement see bottom  
-                         
+                // skipped circle  
                 fill(131,177,177);
                 circle(142,22,diameter);
                 fill(136,188,186);
@@ -205,9 +203,7 @@
                 circle(342,182,diameter);
                 fill(150,151,107);
                 circle(382,182,diameter);
-
-                // skipped circle see bottom
-                
+                // skipped circle
                 fill(194,226,215);
                 circle(462,182,diameter);
                 fill(189,222,211);
@@ -298,9 +294,7 @@
                 circle(22,302,diameter2);
                 fill(168,204,202);
                 circle(62,302,diameter2);
-                
-               
-                
+                // skipped circle
                 fill(163,198,191);
                 circle(142,302,diameter2);
                 fill(110,151,137);
@@ -329,7 +323,6 @@
                 circle(622,302,diameter2);
                 fill(191,222,216);
                 circle(662,302,diameter2);
-
 
                 // new line
                 fill(164,190,189);
@@ -566,9 +559,7 @@
                 circle(302,582,diameter);
                 fill(182,179,134);
                 circle(342,582,diameter);
-              
-                // skipped circle see bottom
-
+                // skipped circle
                 fill(183,203,194);
                 circle(422,582,diameter);
                 fill(139,175,161);
@@ -826,9 +817,7 @@
                 circle(422,862,diameter2);
                 fill(158,190,185);
                 circle(462,862,diameter2);
-
-                // skipped circle see bottom
-
+                // skipped circle
                 fill(114,155,137);
                 circle(542,862,diameter2);
                 fill(158,189,174);
@@ -893,10 +882,8 @@
                 circle(302,942,diameter2);
                 fill(117,153,153);
                 circle(342,942,diameter2);
-
                 fill(143,185,181);
                 circle(382,942,diameter2);
-                
                 fill(126,168,164);
                 circle(422,942,diameter2);
                 fill(129,170,166);
@@ -963,7 +950,6 @@
                 fill(94,139,162);
                 triangle(0,60,60,0,0,0);
                 triangle(624,0,684,60,684,0);
-
                 triangle(0,944,0,1004,60,1004);
                 triangle(624,1004,684,944,684,1004);
        
@@ -986,15 +972,14 @@
                 // signature
                 fill(0,0,0);
                 textSize(size);
-                size+= sizeDirection;
-                count++;
+                text('Max W. Bartley',522,905);
+                frameRate(48)
+                
                 if(count > 5)
                 {
                     sizeDirection *=-1;
                     count = 0;
                 }
-                text('Max W. Bartley',522,905);
-                frameRate(48)
                 
                 if(diameter >= 90 || diameter <= 0)
                 {
@@ -1020,32 +1005,34 @@
                 {
                     movement3*=-1;
                 }
-                
+              
                 if(y2 >=980 || y2 <=500)
                 {
                     movement4*=-1;
                 }
-                
-                if(x3 >=582 || x3 <=82)
+             
+                if(x3 >=382 || x3 <=82)
                 {
                     movement5*=-1;
                 }
-                
-                // circle(382,582,diameter);
-                
-                if(y3 >=782 || y3 <=282)
+              
+                if(y3 >=582 || y3 <=282)
                 {
                     movement6*=-1;
                 }
-            
+              
                 diameter += growth;
                 diameter2 += growth2;
-                
+              
                 x1 += movement1
                 x2 += movement2
+             
                 y1 += movement3
                 y2 += movement4
+             
                 x3 += movement5
                 y3 += movement6
-           
+              
+                size += sizeDirection;
+                count++;
             }
