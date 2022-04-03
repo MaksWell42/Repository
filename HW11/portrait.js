@@ -23,10 +23,11 @@ function setup()
     movement4 = floor(random() * 10) + 1;
     movement5 = floor(random() * 10) + 1;
     /* 
-        I was sure this was unnecessary,
-        but without it the diagonal wouldn't work correctly
+        I was sure this was unnecessary
+        but without it the circle that moves 
+        diagonally wouldn't work correctly
     */
-     movement6 = movement5
+    movement6 = movement5
 }
 
 function draw()
