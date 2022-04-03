@@ -996,12 +996,12 @@
                 text('Max W. Bartley',522,905);
                 frameRate(48)
                 
-                if(diameter >= 40 || diameter <= 0)
+                if(diameter >= 90 || diameter <= 0)
                 {
                     growth*=-1;
                 }
 
-                if(diameter2 >= 40 || diameter2 <= 0)
+                if(diameter2 >= 50 || diameter2 <= 0)
                 {
                     growth2*=-1;
                 }
