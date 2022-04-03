@@ -1,3 +1,4 @@
+// variables
 var diameter = 1;
 var diameter2 = 40;
 var growth = 1;
@@ -15,26 +16,26 @@ var sizeDirection = 1;
 function setup()
 {
     createCanvas(684,1004);
+    // randomized speeds
     movement1 = floor(random() * 10) + 1;
     movement2 = floor(random() * 10) + 1;
     movement3 = floor(random() * 10) + 1;
     movement4 = floor(random() * 10) + 1;
     movement5 = floor(random() * 10) + 1;
-    movement6 = movement5   
 }
 
 function draw()
 {
     // background
-    fill(220)
-    square(0,0,342)
-    square(342,0,342)
-    fill(200)
-    square(342,342,342)
-    square(0,342,342)
-    fill(180)
-    square(0,664,342)
-    square(342,664,342)
+    fill(220);
+    square(0,0,342);
+    square(342,0,342);
+    fill(200);
+    square(342,342,342);
+    square(0,342,342);
+    fill(180);
+    square(0,664,342);
+    square(342,664,342);
 
     // line 1
     fill(165,204,201);
@@ -752,7 +753,6 @@ function draw()
     fill(185,209,187);
     circle(662,782,diameter2);
 
-    
     // line 21
     fill(167,188,179);
     circle(22,822,diameter);
@@ -967,6 +967,7 @@ function draw()
     text('Max W. Bartley',522,905);
     frameRate(48)
     
+    // if statements
     if(count > 5)
     {
         sizeDirection *=-1;
@@ -1010,9 +1011,10 @@ function draw()
   
     if(y3 >=582 || y3 <=282)
     {
-        movement6*=-1;
+        movement5*=-1;
     }
-  
+
+    // variable adjustments
     diameter += growth;
     diameter2 += growth2;
     x1 += movement1
@@ -1020,7 +1022,7 @@ function draw()
     y1 += movement3
     y2 += movement4
     x3 += movement5
-    y3 += movement6
+    y3 += movement5
     size += sizeDirection;
     count++;
 }
