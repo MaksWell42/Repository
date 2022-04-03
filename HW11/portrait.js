@@ -29,11 +29,9 @@ function draw()
     fill(220)
     square(0,0,342)
     square(342,0,342)
-    
     fill(200)
     square(342,342,342)
     square(0,342,342)
-
     fill(180)
     square(0,664,342)
     square(342,664,342)
