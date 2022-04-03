@@ -22,6 +22,11 @@ function setup()
     movement3 = floor(random() * 10) + 1;
     movement4 = floor(random() * 10) + 1;
     movement5 = floor(random() * 10) + 1;
+    /* 
+        I was sure this was unnecessary,
+        but without it the diagonal wouldn't work correctly
+    */
+     movement6 = movement5
 }
 
 function draw()
@@ -1011,7 +1016,7 @@ function draw()
   
     if(y3 >=582 || y3 <=282)
     {
-        movement5*=-1;
+        movement6*=-1;
     }
 
     // variable adjustments
@@ -1022,7 +1027,7 @@ function draw()
     y1 += movement3
     y2 += movement4
     x3 += movement5
-    y3 += movement5
+    y3 += movement6
     size += sizeDirection;
     count++;
 }
