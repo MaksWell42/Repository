@@ -1,30 +1,37 @@
 // player x y 
 var playerX = 100;
 var playerY = 100;
+
 // key codes
 var w = 87; 
 var s = 83;
 var a = 65;
 var d = 68;
+
 // arbitor1 diameter
 var arbitor1D = 60;
 var arbitor1Dgrowth = 1;
+
 // arbitor2 diameter
 var arbitor2D = 40;
 var arbitor2Dgrowth = 1;
+
 // random starting x y for arbitor1
 var arbitor1X = Math.floor(Math.random()*801);
 var arbitor1Y = Math.floor(Math.random()*801);
 var arbitor1XSpeed;
 var arbitor1YSpeed;
+
 // random starting x y for arbitor2
 var arbitor2X = Math.floor(Math.random()*801);
 var arbitor2Y = Math.floor(Math.random()*801);
 var arbitor2XSpeed;
 var arbitor2YSpeed;
+
 // block on mouse click
 var mouseobstacleX;
 var mouseobstacleY;
+
 function setup()
 {
     createCanvas(800, 800);
@@ -33,9 +40,11 @@ function draw()
 {
     background(76, 72, 61);
     stroke(0);
+    
     // player character
     fill(4, 109, 32);
     circle(playerX,playerY,25);
+   
     // arbitor1
     fill(56, 62, 145);
     circle(arbitor1X, arbitor1Y, arbitor1D);
@@ -68,6 +77,7 @@ function draw()
     {
         arbitor1Y = height;
     }
+    
     // arbitor2
     fill(107, 41, 103);
     circle(arbitor2X, arbitor2Y, arbitor2D);
@@ -100,6 +110,7 @@ function draw()
     {
         arbitor2Y = height;
     }
+    
     // player character movement
     if(keyIsDown(w))
     {
@@ -117,15 +128,17 @@ function draw()
     {
         playerX += 5;   
     }
+    
     // mouse click block
     fill(107, 41, 103);
     square(mouseobstacleX, mouseobstacleY, 76);
+    
     // win condition 
     if(playerY > height && playerX > 380 && playerX < 420)
     {
         fill(0);
         textSize(40);
-        text("You Made It!", width/2-100, height-600);
+        text("You Made It!", width/2-100, height/2-200);
     }
     else
     {
@@ -133,20 +146,22 @@ function draw()
         {
             fill(0);
             textSize(30);
-            text("Getting closer!", width/2-80, height-600);
+            text("Getting closer!", width/2-80, height/2-200);
         }
         else
         {
             fill(0);
             textSize(20);
-            text("Can You Make It?", width/2-60, height-600);
+            text("Can You Make It?", width/2-60, height/2-200);
         }
     }
+   
     // exit signs
     fill(0)
     textSize(16);
-    text("EXIT", width-375,height-20)
     text("EXIT", width-460,height-20)
+    text("HERE", width-375,height-20)
+    
     // border
     fill(0);
     rect(0,0,width-10,10);
@@ -154,6 +169,7 @@ function draw()
     rect(0, height-10,width-425, 10);
     rect(425, height-10,width-410, 10);
     rect(width-10,0,10,height);
+
 }
 function mouseClicked()
 { 
