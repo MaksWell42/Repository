@@ -1,11 +1,14 @@
 // variable definitions
 // player starting x y
+// I'd like to move this variable into the playercharacter function
 var pcX = 100;
 var pcY = 100;
 // circle when the mouse is clicked
+// I'd like to move this variable into the mouseClicked function
 var mouseBlockX;
 var mouseBlockY;
 // arbiter1 diameter
+// I'd like to move the remaining variables into the arbiter function
 var arbiter1D = 60;
 var arbiter1Dgrowth = Math.floor(Math.random() * 5)+1;
 // arbiter2 diameter
